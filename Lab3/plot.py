@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_learning_curve(History, fig_name):
-    %matplotlib inline
+    #%matplotlib inline
     plt.figure(figsize=(4, 4))
     plt.title("Learning curve")
     plt.plot(History.history["loss"], label="loss")
@@ -23,7 +23,7 @@ def plot_learning_curve(History, fig_name):
     plt.close()
     
 def plot_validation_metric(History, fig_name):
-    %matplotlib inline
+    #%matplotlib inline
     plt.figure(figsize=(4, 4))
     plt.title("Learning curve_metrics")
     plt.plot(History.history["val_dice_coef"], label="val_dice_coef")
