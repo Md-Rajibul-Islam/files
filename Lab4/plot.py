@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 def plot_learning_curve(History, fig_name):
     print('Epoch: '+ str(np.argmin(History.history["val_loss"])+1))
     print('Lowest Loss: '+ str(np.min(History.history["val_loss"])))
-    %matplotlib inline
+    #%matplotlib inline
     plt.figure(figsize=(4, 4))
     plt.title("Learning curve")
     plt.plot(History.history["loss"], label="loss")
@@ -27,7 +27,7 @@ def plot_learning_curve(History, fig_name):
 def plot_validation_metric(History, fig_name):
     print('Epoch: '+ str(np.argmax(History.history["val_dice_coef"])+1))
     print('Highest accuracy: '+ str(np.max(History.history["val_dice_coef"])))
-    %matplotlib inline
+    #%matplotlib inline
     plt.figure(figsize=(4, 4))
     plt.title("Learning curve_metrics")
     plt.plot(History.history["val_dice_coef"], label="val_dice_coef")
